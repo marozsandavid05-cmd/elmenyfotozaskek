@@ -1,0 +1,119 @@
+<!--{"title":"Ajánlatkérés · Élményfotózás","desc":"Kérj ajánlatot Pixie selfierobotra, AI Selfie fotóállványra, Selfieboxra vagy rendezvényfotósra. Telefon: +36 20 319 21 16, +36 70 370 00 30.","nav":"aj","body":"p-aj","ld":{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Főoldal","item":"https://elmenyfotozas.hu/"},{"@type":"ListItem","position":2,"name":"Ajánlatkérés","item":"https://elmenyfotozas.hu/ajanlatkeres"}]}}-->
+<div class="wrap">
+  <section class="aj-head">
+    <div>
+      <h1 class="d1" data-reveal>Meséld el az estét</h1>
+      <p class="lead mute mt1" data-reveal="2">Mikor, hol, hány vendég, meddig. Ennyiből már tudunk ajánlatot adni, és segítünk az eszközt is kiválasztani.</p>
+    </div>
+    <div class="aj-contact" data-reveal="2">
+      <p class="mono mute">Gyorsabb telefonon</p>
+      <a href="tel:+36203192116">+36 20 319 21 16</a>
+      <a href="tel:+36703700030">+36 70 370 00 30</a>
+      <a class="mail tlink" href="mailto:hello@elmenyfotozas.hu">hello@elmenyfotozas.hu</a>
+    </div>
+  </section>
+
+  <section class="aj-next" aria-label="Mi történik a küldés után">
+    <div data-reveal><span class="mono">1</span><b>Elolvassuk</b><p>Átnézzük a rendezvény adatait és a helyszínt.</p></div>
+    <div data-reveal="2"><span class="mono">2</span><b>Visszajelzünk</b><p>E-mailben vagy telefonon küldjük az ajánlatot.</p></div>
+    <div data-reveal="3"><span class="mono">3</span><b>Lefoglaljuk a napot</b><p>Ha megfelel, rögzítjük a dátumot és a részleteket.</p></div>
+  </section>
+
+  <form class="form" data-form action="https://api.web3forms.com/submit" method="POST" novalidate>
+    <input type="hidden" name="access_key" value="IDE_JON_A_WEB3FORMS_KULCS">
+    <input type="hidden" name="subject" value="Új ajánlatkérés az elmenyfotozas.hu oldalról">
+    <input type="hidden" name="from_name" value="Élményfotózás weboldal">
+    <input type="hidden" name="redirect" value="">
+    <input type="checkbox" name="botcheck" class="sr" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+    <h2 class="d2">Ajánlatkérés</h2>
+    <p class="mute">A csillaggal jelölt mezők kötelezők.</p>
+
+    <div class="fgrid">
+      <fieldset class="f f--full" data-req>
+        <legend>Mire kérsz ajánlatot? *</legend>
+        <div class="opts">
+          <label><input type="radio" name="szolgaltatas" value="Pixie, a selfierobot" data-v="pixie" required>Pixie</label>
+          <label><input type="radio" name="szolgaltatas" value="AI Selfie" data-v="ai">AI Selfie</label>
+          <label><input type="radio" name="szolgaltatas" value="Selfiebox" data-v="selfiebox">Selfiebox</label>
+          <label><input type="radio" name="szolgaltatas" value="Rendezvényfotózás" data-v="foto">Rendezvényfotózás</label>
+          <label><input type="radio" name="szolgaltatas" value="Még nem tudom, segítsetek" data-v="nemtudom">Még nem tudom</label>
+        </div>
+        <span class="err">Válassz egy lehetőséget.</span>
+      </fieldset>
+
+      <div class="f" data-when="pixie ai selfiebox" hidden>
+        <label for="idotartam">Bérlési idő</label>
+        <select id="idotartam" name="idotartam">
+          <option>3 óra</option><option selected>5 óra</option><option>7 óra</option><option>Egyedi időtartam</option>
+        </select>
+      </div>
+
+      <fieldset class="f" data-when="pixie" hidden>
+        <legend>Beszélgető funkció</legend>
+        <div class="opts">
+          <label><input type="radio" name="beszelgeto_funkcio" value="Igen, kérem">Igen, kérem</label>
+          <label><input type="radio" name="beszelgeto_funkcio" value="Nem kérem" checked>Nem kérem</label>
+        </div>
+      </fieldset>
+
+      <div class="f" data-when="ai selfiebox" hidden>
+        <label for="hatter">Háttér</label>
+        <select id="hatter" name="hatter">
+          <option>Még nem választottam</option><option>Egyszínű háttér</option>
+          <option>01-es háttér</option><option>02-es háttér</option><option>03-as háttér</option><option>04-es háttér</option><option>05-ös háttér</option><option>06-os háttér</option><option>07-es háttér</option><option>08-as háttér</option><option>09-es háttér</option><option>10-es háttér</option><option>11-es háttér</option><option>12-es háttér</option>
+        </select>
+        <span class="hint"><a class="tlink" href="hatterek.html">Hátterek megnézése</a></span>
+      </div>
+
+      <div class="f" data-when="foto" hidden>
+        <label for="jelleg">A rendezvény jellege</label>
+        <select id="jelleg" name="rendezveny_jellege">
+          <option>Céges rendezvény</option><option>Rendezvénysorozat (több napos)</option><option>Konferencia</option><option>Workshop</option><option>Családi esemény</option>
+        </select>
+      </div>
+
+      <div class="f" data-req>
+        <label for="nev">Név *</label>
+        <input id="nev" name="nev" type="text" autocomplete="name" required>
+        <span class="err">Írd be a neved.</span>
+      </div>
+      <div class="f" data-req>
+        <label for="email">E-mail *</label>
+        <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required spellcheck="false">
+        <span class="err">Adj meg egy érvényes e-mail-címet, például nev@ceg.hu.</span>
+      </div>
+      <div class="f" data-req>
+        <label for="tel">Telefon *</label>
+        <input id="tel" name="telefon" type="tel" autocomplete="tel" inputmode="tel" required placeholder="+36 …">
+        <span class="err">Add meg a telefonszámod, hogy visszahívhassunk.</span>
+      </div>
+      <div class="f">
+        <label for="datum">A rendezvény dátuma <span class="opt">(ha már tudod)</span></label>
+        <input id="datum" name="datum" type="date">
+      </div>
+      <div class="f">
+        <label for="helyszin">Helyszín <span class="opt">(város vagy helyszín neve)</span></label>
+        <input id="helyszin" name="helyszin" type="text" autocomplete="off">
+      </div>
+      <div class="f">
+        <label for="letszam">Várható vendégszám</label>
+        <input id="letszam" name="vendegszam" type="text" inputmode="numeric" autocomplete="off">
+      </div>
+      <div class="f f--full">
+        <label for="uzenet">Egyéb, amit tudnunk érdemes <span class="opt">(nem kötelező)</span></label>
+        <textarea id="uzenet" name="uzenet" rows="5"></textarea>
+      </div>
+      <div class="f f--full" data-req>
+        <label class="consent"><input type="checkbox" name="adatkezeles" value="elfogadva" required><span>Elolvastam az <a class="tlink" href="adatkezeles.html" target="_blank">adatkezelési tájékoztatót</a>, és hozzájárulok, hogy a megadott adataimmal felvegyétek velem a kapcsolatot. *</span></label>
+        <span class="err">Az ajánlatkéréshez szükség van a hozzájárulásodra.</span>
+      </div>
+    </div>
+
+    <div class="form__end">
+      <button class="btn" type="submit">Ajánlatkérés elküldése {{i:arrow-right}}</button>
+      <span class="mute">Az adataidat csak a kapcsolatfelvételhez használjuk.</span>
+    </div>
+    <p class="form__note" data-form-note hidden aria-live="polite">Az online küldés még nincs bekapcsolva. <a href="mailto:hello@elmenyfotozas.hu">Nyisd meg a kitöltött levelet</a>, és küldd el a leveleződből, vagy hívj minket.</p>
+  </form>
+</div>
